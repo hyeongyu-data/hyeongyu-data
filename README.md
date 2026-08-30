@@ -44,9 +44,10 @@
 
 ### 2. construction_risk_agent — 공사 리스크·추가비용 산정 에이전트 🏗️
 
-`LangGraph` `Airflow` `FastAPI` `Python`
+`LangGraph` `Airflow` `FastAPI` `AWS Bedrock` `Python`
 
 > 팀 프로젝트 · 2026.06
+> 레포: [hyeongyu-data/construction-risk-agent](https://github.com/hyeongyu-data/construction-risk-agent)
 
 기상·공정지연·자재리스크로 발생하는 추가공사비를 산정해 공무 담당자용 리포트를 생성하는 LangGraph
 멀티에이전트. 라우터/synthesize 로직과 few-shot 예시 세트를 설계하고, **조달청 자재단가 자동 갱신
