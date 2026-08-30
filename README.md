@@ -30,8 +30,7 @@
 > 레포: [Autoresearch-infra](https://github.com/SKYAHO/Autoresearch-infra) · [Autoresearch](https://github.com/SKYAHO/Autoresearch) · [Autoresearch-airflow](https://github.com/SKYAHO/Autoresearch-airflow) *(팀 조직 저장소)*
 
 가설을 제출하면 AI 에이전트가 Kubernetes에서 실험을 실행하고 리포트를 자동 생성하는 ML 라이프사이클
-자동화 플랫폼. 인프라 저장소 커밋 **326건 중 222건(68%)**을 직접 작성 — 코칭 종료 시점 멘토 평가
-"인프라·피처스토어 우수".
+자동화 플랫폼.
 
 - VPC부터 GKE·CI/CD까지 dev 인프라를 **1주일 만에 0에서 구축**, Terraform 리소스 **25개 무결점 적용**
 - 관측 스택 부재 문제를 3-에이전트 병렬 조사로 **8개 이슈로 분해 → 1.5일 만에 전량 배포·검증**
@@ -47,8 +46,7 @@
 
 `LangGraph` `Airflow` `FastAPI` `Python`
 
-> 팀 프로젝트 · 2026.06 · 전체 커밋 기여도 16%(서브 기여)
-> 레포: [daexung/construction_risk_agent](https://github.com/daexung/construction_risk_agent) *(팀 저장소)*
+> 팀 프로젝트 · 2026.06
 
 기상·공정지연·자재리스크로 발생하는 추가공사비를 산정해 공무 담당자용 리포트를 생성하는 LangGraph
 멀티에이전트. 라우터/synthesize 로직과 few-shot 예시 세트를 설계하고, **조달청 자재단가 자동 갱신
