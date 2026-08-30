@@ -44,14 +44,15 @@
 
 ### 2. construction_risk_agent — 공사 리스크·추가비용 산정 에이전트 🏗️
 
-`LangGraph` `Airflow` `FastAPI` `AWS Bedrock` `Python`
+`LangGraph` `FastAPI` `AWS Bedrock` `PostgreSQL` `Python`
 
-> 팀 프로젝트 · 2026.06
-> 레포: [hyeongyu-data/construction-risk-agent](https://github.com/hyeongyu-data/construction-risk-agent)
+> 5인 팀 · 2026.06
+> 레포: [hyeongyu-data/construction-risk-agent](https://github.com/hyeongyu-data/construction-risk-agent) *(포트폴리오용 개인 정리본)*
 
 기상·공정지연·자재리스크로 발생하는 추가공사비를 산정해 공무 담당자용 리포트를 생성하는 LangGraph
-멀티에이전트. 라우터/synthesize 로직과 few-shot 예시 세트를 설계하고, **조달청 자재단가 자동 갱신
-Airflow DAG**를 신규 개발(수집 → 전처리 → DB 갱신, 매월 자동 실행).
+멀티에이전트. **라우터 파이프라인**(`router.py`·`graph.py`·`router_node.py`)과 **synthesize 노드**를
+초기 골격부터 전담 설계했고, **장비 대기비 산정 에이전트**(`agents/equipment_cost/`)를 정규화·규격
+매칭·DB 스키마까지 처음부터 구축.
 
 ### 3. 헬스/뷰티 이커머스 플랫폼 — 결제·마케팅 데이터 통합 🛒
 
@@ -86,16 +87,20 @@ GTM 기반 GA4·메타 픽셀·Mixpanel 풀퍼널 트래킹을 직접 설계·�
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)
+
+**AI / Agents**
+
+![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=flat&logo=langgraph&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS%20Bedrock-232F3E?style=flat&logo=amazonaws&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white)
+![Claude](https://img.shields.io/badge/Claude%20Code-D97757?style=flat&logo=anthropic&logoColor=white)
 
 **Marketing & Analytics**
 
 ![Google Analytics](https://img.shields.io/badge/Google%20Analytics-E37400?style=flat&logo=googleanalytics&logoColor=white)
 ![Google Tag Manager](https://img.shields.io/badge/Google%20Tag%20Manager-246FDB?style=flat&logo=googletagmanager&logoColor=white)
 ![Mixpanel](https://img.shields.io/badge/Mixpanel-7856FF?style=flat&logo=mixpanel&logoColor=white)
-
-**AI Tools**
-
-![Claude](https://img.shields.io/badge/Claude%20Code-D97757?style=flat&logo=anthropic&logoColor=white)
 
 ---
 
