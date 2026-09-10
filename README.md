@@ -1,5 +1,5 @@
 <h1 align="center">안녕하세요, 최현규입니다. 👋</h1>
-<h3 align="center">이커머스 데이터 문제를 인프라로 풀어온 경험을 바탕으로, 데이터가 안정적으로 흐르는 플랫폼을 만드는 엔지니어를 지향합니다.</h3>
+<h3 align="center">이전에는 이커머스 플랫폼을 1인 개발·운영했으며, 현재는 데이터 엔지니어링과 MLOps를 중심으로 역량을 확장하고 있습니다.</h3>
 
 <div align="center">
   <a href="mailto:hyeongyu.data@gmail.com"><img src="https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
@@ -10,13 +10,9 @@
 
 ## 🙋‍♂️ About Me
 
-- ☁️ **SK플래닛 생성형 AI 활용 데이터 엔지니어 과정 2기** 수료. 8주 팀 캡스톤(Auto Research)에서 5인 중
-  인프라를 단독 전담했습니다.
-- 💼 이전에는 헬스/뷰티 이커머스 플랫폼을 **3년간 1인 개발자로 설계~운영**하며 15개+ 브랜드로 확장,
-  결제·오픈마켓 데이터를 통합하고 GA4·GTM 트래킹을 직접 구축한 경험이 데이터 엔지니어링 전환의 계기입니다.
-- 🔍 겉으로 보이는 증상만 고치지 않고 **같은 유형의 문제가 왜 반복되는지 구조적으로 파고드는** 방식으로
-  일합니다. AI 도구도 빠른 생성보다 **팀 검증 프로세스에 편입**시키는 데 집중합니다(Claude Code PR 리뷰
-  게이트 직접 설계).
+- ☁️ SK플래닛 생성형 AI 활용 데이터 엔지니어 과정 2기를 수료했습니다. 팀 프로젝트 Auto Research에서 클라우드 인프라와 배포·모니터링 환경을 담당했습니다.
+- 💼 이커머스 플랫폼을 1인 개발·운영하며 결제·주문 연동과 사용자 행동 데이터 수집을 경험했습니다.
+- 🔍 문제가 생기면 원인을 확인하고 해결 과정과 재발 방지 방법을 코드와 문서에 남깁니다.
 
 ---
 
@@ -29,44 +25,50 @@
 > 5인 팀 · 2026.06–08(8주 캡스톤) · SK플래닛 최종 프로젝트 · 담당: 인프라 전담
 > 레포: [Autoresearch-infra](https://github.com/SKYAHO/Autoresearch-infra) · [Autoresearch](https://github.com/SKYAHO/Autoresearch) · [Autoresearch-airflow](https://github.com/SKYAHO/Autoresearch-airflow) *(팀 조직 저장소)*
 
-가설을 제출하면 AI 에이전트가 Kubernetes에서 실험을 실행하고 리포트를 자동 생성하는 ML 라이프사이클
-자동화 플랫폼.
+가설을 제출하면 AI 에이전트가 Kubernetes에서 실험을 실행하고 리포트를 자동 생성하는 ML 라이프사이클 자동화 플랫폼.
 
-- VPC부터 GKE·CI/CD까지 dev 인프라를 **1주일 만에 0에서 구축**, Terraform 리소스 **25개 무결점 적용**
-- 관측 스택 부재 문제를 3-에이전트 병렬 조사로 **8개 이슈로 분해 → 1.5일 만에 전량 배포·검증**
-  (Grafana 대시보드 6장, ELK 구조화 로깅)
-- Prometheus 실측으로 리소스 요청 대비 실사용률이 **11~48%**에 불과함을 발견해 데이터 기반 스케일링 기준 재설계
-- Airflow **45시간 crash-loop** 장애를 "로컬 tfvars 설정 drift"로 근본 진단, 같은 유형 사고 3건을
-  추가로 찾아 원인 클래스로 일반화·재발 방지책 설계
-- 인프라 비용 실측·관리 — **월 $270**, Artifact Registry·CIDR `/20`·OIDC 인증 등 모든 결정에 트레이드오프 직접 판단
-- Claude Code를 팀 PR 리뷰 게이트로 설계 — IAM·시크릿·배포 안전성 자동 점검 + "이해도 확인" 질문에
-  근거 기반 답변을 요구하는 검증 구조
+- VPC부터 GKE·CI/CD까지 dev 인프라를 1주일 만에 0에서 구축하고 Terraform 초기 관리 리소스 25개를 적용한 뒤 `plan`의 `No changes`를 확인했습니다.
+- 관측 스택 부재 문제를 8개 이슈로 분해해 1.5일 만에 Prometheus/Grafana·ELK를 배포·검증했습니다.
+- Airflow 45시간 crash-loop를 오래된 `tfvars`의 NetworkPolicy 설정 불일치로 진단하고 유사 설정 사고 3건을 재발 방지 과제로 정리했습니다.
+- 인프라 비용을 월 약 270달러 규모로 추적하고 OIDC 인증·Secret 관리·권한 경계를 운영 문서로 남겼습니다.
 
-### 2. construction_risk_agent — 공사 리스크·추가비용 산정 에이전트 🏗️
+### 2. Ecommerce ETL — 이종 주문 데이터 수집·정제 📦
+
+`Python` `Airflow` `pandas` `PyArrow` `Docker Compose`
+
+> 개인 프로젝트 · 2026.09– 진행 중
+> 레포: [ecommerce-etl-pipeline](https://github.com/hyeongyu-data/ecommerce-etl-pipeline)
+
+이커머스 현장에서 결제·오픈마켓 주문 데이터를 대조하던 경험을 재현 가능한 ETL 파이프라인으로 구현하고 있습니다.
+
+- 합성 PG 주문과 로컬 목업 오픈마켓 HTTP API를 수집하는 Airflow DAG 2개를 구현했습니다.
+- 원천별 필드를 통합 스키마로 매핑하고 Parquet staging에 저장하며 데이터 품질을 검사합니다.
+- GA4 이벤트 수집·BigQuery 적재·대시보드는 후속 작업으로 명시해 진행 상태를 구분했습니다.
+
+### 3. Construction Risk Agent — 공사 리스크·추가비용 산정 에이전트 🏗️
 
 `LangGraph` `FastAPI` `AWS Bedrock` `PostgreSQL` `Python`
 
-> 5인 팀 · 2026.06
-> 레포: [hyeongyu-data/construction-risk-agent](https://github.com/hyeongyu-data/construction-risk-agent) *(포트폴리오용 개인 정리본)*
+> 5인 팀 · 2026.06 · 담당: 라우터·결과 합성·장비비 에이전트
+> 레포: [construction-risk-agent](https://github.com/hyeongyu-data/construction-risk-agent)
 
-기상·공정지연·자재리스크로 발생하는 추가공사비를 산정해 공무 담당자용 리포트를 생성하는 LangGraph
-멀티에이전트. **라우터 파이프라인**(`router.py`·`graph.py`·`router_node.py`)과 **synthesize 노드**를
-초기 골격부터 전담 설계했고, **장비 대기비 산정 에이전트**(`agents/equipment_cost/`)를 정규화·규격
-매칭·DB 스키마까지 처음부터 구축.
+기상·공정지연·자재리스크로 발생하는 추가공사비를 산정해 공무 담당자용 리포트를 생성하는 LangGraph 멀티에이전트.
 
-### 3. 헬스/뷰티 이커머스 플랫폼 — 결제·마케팅 데이터 통합 🛒
+- 플래너 기반 동적 라우팅과 `synthesize` 노드를 설계·구현했습니다.
+- 장비명 정규화 → 규격 매칭 → 일대여료 조회 → 대기율·일수 반영의 장비 대기비 산정 로직을 구축했습니다.
 
-`PHP` `MySQL` `GTM` `GA4` `Meta Pixel` `Mixpanel`
+### 4. Air Quality Project — 서울 기상 알림 파이프라인 🌤️
 
-> 1인 개발 · 2023.10–2026.02(2년 5개월) · 담당: 설계·개발·배포·운영 전체
-> 그누보드5/영카트5 오픈소스 기반, 15개+ 브랜드로 확장 *(비공개 저장소 — 이전 직장 코드)*
+`Python` `Airflow` `Kafka` `OpenSearch` `Docker Compose`
 
-결제 4종(KCP·Payple·네이버페이·LG유플러스)·오픈마켓 2종(네이버·쿠팡)의 서로 다른 데이터를 통합하고,
-GTM 기반 GA4·메타 픽셀·Mixpanel 풀퍼널 트래킹을 직접 설계·구축한 경험이 데이터 엔지니어 전환의 계기.
+> 개인 프로젝트 · 2026.04–08 · 로컬 Docker 재현
+> 레포: [air-quality-project](https://github.com/hyeongyu-data/air-quality-project)
 
-- 3년간 **859커밋**, 이종 결제·마켓플레이스 데이터를 통합 관리자로 집계하는 구조 설계
-- 조회→장바구니→결제→구매→가입 풀퍼널을 GA4·메타 픽셀에 병행 연동, 결제수단별(PG/네이버페이) 이벤트 분리 설계
-- 브랜드 3곳(재직 기간 2025년 기준) 합산 **구매 9.2만 건 · 매출 약 94억원**을 직접 구축한 트래킹으로 추적
+기상청·에어코리아 데이터를 수집해 Kafka·OpenSearch·알림 채널로 연결하는 이벤트 파이프라인입니다.
+
+- 결측값을 0으로 대체하지 않고 `정보없음`으로 처리하며 DLQ·수동 커밋·멱등 event ID로 재처리를 안전하게 했습니다.
+- 테스트 195개와 ruff·pip-audit·gitleaks·hadolint 기반 CI 검증을 구성하고 실데이터 알림 수신을 확인했습니다.
+- 현재 구성은 로컬 검증용이며 인터넷 공개 운영용이 아닙니다.
 
 ---
 
@@ -101,7 +103,3 @@ GTM 기반 GA4·메타 픽셀·Mixpanel 풀퍼널 트래킹을 직접 설계·�
 ![Google Analytics](https://img.shields.io/badge/Google%20Analytics-E37400?style=flat&logo=googleanalytics&logoColor=white)
 ![Google Tag Manager](https://img.shields.io/badge/Google%20Tag%20Manager-246FDB?style=flat&logo=googletagmanager&logoColor=white)
 ![Mixpanel](https://img.shields.io/badge/Mixpanel-7856FF?style=flat&logo=mixpanel&logoColor=white)
-
----
-
-<p align="center"><img src="https://github-readme-stats.vercel.app/api?username=hyeongyu-data&show_icons=true&theme=default&hide_border=true" alt="hyeongyu-data github stats" /></p>
