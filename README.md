@@ -10,6 +10,8 @@ SK플래닛 생성형AI 활용 데이터엔지니어 과정 2기를 수료했으
 
 [이메일](mailto:hyeongyu.data@gmail.com) · [이력서](https://github.com/hyeongyu-data/resume) · [최근 작업](https://github.com/hyeongyu-data/ecommerce-etl-pipeline)
 
+![프로필 조회수](https://komarev.com/ghpvc/?username=hyeongyu-data&label=프로필%20조회수&color=0e75b6&style=flat)
+
 ## 지금 집중하는 것
 
 - Python과 Airflow로 재현 가능한 데이터 수집·정제 파이프라인 만들기
@@ -37,6 +39,8 @@ SK플래닛 생성형AI 활용 데이터엔지니어 과정 2기를 수료했으
 - VPC·GKE·Cloud SQL·CI 인증을 Terraform으로 구성하고 초기 관리 리소스 25개를 적용했습니다.
 - 관측 공백을 8개 이슈로 나눠 1.5일 안에 Prometheus/Grafana·ELK 환경을 배포·검증했습니다.
 - 45시간 지속된 Airflow crash-loop를 오래된 `tfvars`와 NetworkPolicy 설정 불일치로 진단했습니다.
+- 인프라 비용을 월 약 270달러 규모로 추적했고, Artifact Registry·CIDR `/20`·OIDC 인증 선택의 근거를 문서화했습니다.
+- Claude Code를 IAM·시크릿·배포 안전성을 확인하는 PR 검증 절차에 편입했습니다.
 
 [인프라](https://github.com/SKYAHO/Autoresearch-infra) · [앱](https://github.com/SKYAHO/Autoresearch) · [Airflow](https://github.com/SKYAHO/Autoresearch-airflow)
 
@@ -72,6 +76,17 @@ SK플래닛 생성형AI 활용 데이터엔지니어 과정 2기를 수료했으
 기상청·에어코리아 데이터를 Airflow로 수집하고 Kafka·OpenSearch·알림 채널로 연결했습니다. 결측값의 `정보없음` 처리, DLQ·멱등 event ID, 테스트 195개와 CI 보안 검사를 포함합니다. 현재 구성은 로컬 검증용입니다.
 
 [코드와 운영 기록](https://github.com/hyeongyu-data/air-quality-project)
+
+</details>
+
+<details>
+<summary><strong>이커머스 플랫폼 · 결제·마케팅 데이터 통합</strong></summary>
+
+2023.10–2026.02 · 1인 개발·운영 · 비공개 직장 코드
+
+그누보드5/영카트5 기반 헬스·뷰티 커머스를 15개 이상 브랜드로 확장했습니다. KCP·Payple·네이버페이·LG유플러스 결제 4종과 네이버·쿠팡 주문을 통합 조회·정산하고, GTM 기반 GA4·Meta Pixel 이벤트를 설계했습니다.
+
+2025년 재직 기간 기준 3개 브랜드에서 구매 약 9.2만 건·구매 수익 약 94억 원이 추적되는 데이터 수집 체계를 운영했습니다. 이 수치는 매출 증대 성과가 아니라 구축한 트래킹으로 확인한 거래 규모입니다.
 
 </details>
 
