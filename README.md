@@ -1,97 +1,113 @@
-# 최현규입니다 👋
+<h1 align="center">안녕하세요, 최현규입니다. 👋</h1>
+<h3 align="center">이커머스 데이터 문제를 인프라로 풀어온 경험을 바탕으로, 데이터가 안정적으로 흐르는 플랫폼을 만드는 엔지니어를 지향합니다.</h3>
 
-데이터가 만들어지는 현장과 운영되는 환경을 함께 이해하는 엔지니어입니다.
+<div align="center">
+  <a href="mailto:hyeongyu.data@gmail.com"><img src="https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+  <img src="https://komarev.com/ghpvc/?username=hyeongyu-data&label=Profile%20views&color=0e75b6&style=for-the-badge" alt="hyeongyu-data" />
+</div>
 
-이커머스 플랫폼을 1인 개발자로 설계·운영하며 결제·주문·사용자 행동 데이터가 시스템마다 다르게 쌓이는 문제를 경험했습니다. 지금은 그 경험을 바탕으로 데이터 플랫폼과 MLOps를 공부하고, 수집부터 실행·관측까지 이어지는 흐름을 직접 만들고 있습니다.
+---
 
-제가 일할 때 가장 중요하게 보는 것은 **코드와 실제 실행 상태의 일치**입니다. 장애가 발생하면 증상만 없애지 않고 설정, 권한, 배포 절차에서 같은 문제가 반복될 지점을 찾아 문서와 코드에 함께 반영합니다.
+## 🙋‍♂️ About Me
 
-SK플래닛 생성형AI 활용 데이터엔지니어 과정 2기를 수료했으며, 데이터 플랫폼·MLOps 엔지니어로 전환하고 있습니다.
+- ☁️ **SK플래닛 생성형 AI 활용 데이터 엔지니어 과정 2기** 수료. 8주 팀 캡스톤(Auto Research)에서 5인 중
+  인프라를 단독 전담했습니다.
+- 💼 이전에는 헬스/뷰티 이커머스 플랫폼을 **3년간 1인 개발자로 설계~운영**하며 15개+ 브랜드로 확장,
+  결제·오픈마켓 데이터를 통합하고 GA4·GTM 트래킹을 직접 구축한 경험이 데이터 엔지니어링 전환의 계기입니다.
+- 🔍 겉으로 보이는 증상만 고치지 않고 **같은 유형의 문제가 왜 반복되는지 구조적으로 파고드는** 방식으로
+  일합니다. AI 도구도 빠른 생성보다 **팀 검증 프로세스에 편입**시키는 데 집중합니다(Claude Code PR 리뷰
+  게이트 직접 설계).
 
-[이메일](mailto:hyeongyu.data@gmail.com) · [이력서](https://github.com/hyeongyu-data/resume) · [최근 작업](https://github.com/hyeongyu-data/ecommerce-etl-pipeline)
+---
 
-![프로필 조회수](https://komarev.com/ghpvc/?username=hyeongyu-data&label=프로필%20조회수&color=0e75b6&style=flat)
+## 🚀 Projects
 
-## 지금 집중하는 것
+### 1. Auto Research — 에이전트가 쓰는 ML 플랫폼 ⚙️
 
-- Python과 Airflow로 재현 가능한 데이터 수집·정제 파이프라인 만들기
-- Kubernetes·Terraform·GitOps 환경에서 ML 실행을 안전하게 운영하기
-- 데이터 품질, 관측성, 재처리와 보안을 설계 단계부터 검증하기
-- AI 도구가 만든 변경을 근거와 테스트로 검토하는 개발 흐름 만들기
+`Terraform` `GKE` `ArgoCD` `Prometheus/Grafana` `ELK` `GitHub Actions` `Google Secret Manager`
 
-## 제가 해온 일
+> 5인 팀 · 2026.06–08(8주 캡스톤) · SK플래닛 최종 프로젝트 · 담당: 인프라 전담
+> 레포: [Autoresearch-infra](https://github.com/SKYAHO/Autoresearch-infra) · [Autoresearch](https://github.com/SKYAHO/Autoresearch) · [Autoresearch-airflow](https://github.com/SKYAHO/Autoresearch-airflow) *(팀 조직 저장소)*
 
-| 경험 | 한 줄 설명 |
-| --- | --- |
-| 이커머스 개발 | 15개 이상 브랜드의 커머스 플랫폼을 1인 개발·운영하고 결제·오픈마켓 데이터를 통합했습니다. |
-| ML 플랫폼 인프라 | 5인 팀 프로젝트에서 GCP·Terraform·GKE·배포·관측 환경을 전담했습니다. |
-| 데이터 파이프라인 | Airflow·Kafka·OpenSearch 기반 수집, 품질 검사, 알림 파이프라인을 구현했습니다. |
+가설을 제출하면 AI 에이전트가 Kubernetes에서 실험을 실행하고 리포트를 자동 생성하는 ML 라이프사이클 자동화 플랫폼.
 
-## 대표 작업
+- VPC부터 GKE·CI/CD까지 dev 인프라를 1주일 만에 0에서 구축하고 Terraform 초기 관리 리소스 25개를 적용한 뒤 `plan`의 `No changes`를 확인했습니다.
+- 관측 스택 부재 문제를 8개 이슈로 분해해 1.5일 만에 Prometheus/Grafana·ELK를 배포·검증했습니다.
+- Airflow 45시간 crash-loop를 오래된 `tfvars`의 NetworkPolicy 설정 불일치로 진단하고 유사 설정 사고 3건을 재발 방지 과제로 정리했습니다.
+- 인프라 비용을 월 약 270달러 규모로 추적하고 OIDC 인증·Secret 관리·권한 경계를 운영 문서로 남겼습니다.
 
-<details>
-<summary><strong>Auto Research · ML 실험 자동화 플랫폼</strong></summary>
+### 2. Ecommerce ETL — 이종 주문 데이터 수집·정제 📦
 
-2026.06–08 · SK플래닛 교육과정 캡스톤 · 5인 팀 · 인프라 전담
+`Python` `Airflow` `pandas` `PyArrow` `Docker Compose`
 
-가설을 입력하면 AI 에이전트가 Kubernetes에서 실험을 실행하고 리포트를 생성하는 플랫폼입니다.
+> 개인 프로젝트 · 2026.09– 진행 중
+> 레포: [ecommerce-etl-pipeline](https://github.com/hyeongyu-data/ecommerce-etl-pipeline)
 
-- VPC·GKE·Cloud SQL·CI 인증을 Terraform으로 구성하고 초기 관리 리소스 25개를 적용했습니다.
-- 관측 공백을 8개 이슈로 나눠 1.5일 안에 Prometheus/Grafana·ELK 환경을 배포·검증했습니다.
-- 45시간 지속된 Airflow crash-loop를 오래된 `tfvars`와 NetworkPolicy 설정 불일치로 진단했습니다.
-- 인프라 비용을 월 약 270달러 규모로 추적했고, Artifact Registry·CIDR `/20`·OIDC 인증 선택의 근거를 문서화했습니다.
-- Claude Code를 IAM·시크릿·배포 안전성을 확인하는 PR 검증 절차에 편입했습니다.
+이커머스 현장에서 결제·오픈마켓 주문 데이터를 대조하던 경험을 재현 가능한 ETL 파이프라인으로 구현하고 있습니다.
 
-[인프라](https://github.com/SKYAHO/Autoresearch-infra) · [앱](https://github.com/SKYAHO/Autoresearch) · [Airflow](https://github.com/SKYAHO/Autoresearch-airflow)
+- 합성 PG 주문과 로컬 목업 오픈마켓 HTTP API를 수집하는 Airflow DAG 2개를 구현했습니다.
+- 원천별 필드를 통합 스키마로 매핑하고 Parquet staging에 저장하며 데이터 품질을 검사합니다.
+- GA4 이벤트 수집·BigQuery 적재·대시보드는 후속 작업으로 명시해 진행 상태를 구분했습니다.
 
-</details>
+### 3. Construction Risk Agent — 공사 리스크·추가비용 산정 에이전트 🏗️
 
-<details>
-<summary><strong>Ecommerce ETL · 이종 주문 데이터 수집·정제</strong></summary>
+`LangGraph` `FastAPI` `AWS Bedrock` `PostgreSQL` `Python`
 
-2026.09– · 개인 프로젝트 · 진행 중
+> 5인 팀 · 2026.06 · 담당: 라우터·결과 합성·장비비 에이전트
+> 레포: [construction-risk-agent](https://github.com/hyeongyu-data/construction-risk-agent)
 
-합성 PG 주문과 로컬 목업 오픈마켓 API를 Airflow DAG로 수집하고 통합 스키마와 Parquet staging으로 정제합니다. GA4 이벤트, BigQuery 적재, 대시보드를 후속 작업으로 진행합니다.
+기상·공정지연·자재리스크로 발생하는 추가공사비를 산정해 공무 담당자용 리포트를 생성하는 LangGraph 멀티에이전트.
 
-[저장소와 실행 방법](https://github.com/hyeongyu-data/ecommerce-etl-pipeline)
+- 플래너 기반 동적 라우팅과 `synthesize` 노드를 설계·구현했습니다.
+- 장비명 정규화 → 규격 매칭 → 일대여료 조회 → 대기율·일수 반영의 장비 대기비 산정 로직을 구축했습니다.
 
-</details>
+### 4. Air Quality Project — 서울 기상 알림 파이프라인 🌤️
 
-<details>
-<summary><strong>Construction Risk Agent · 건설 리스크 분석 에이전트</strong></summary>
+`Python` `Airflow` `Kafka` `OpenSearch` `Docker Compose`
 
-2026.06 · 5인 팀 · 라우터·결과 합성·장비비 에이전트 담당
+> 개인 프로젝트 · 2026.04–08 · 로컬 Docker 재현
+> 레포: [air-quality-project](https://github.com/hyeongyu-data/air-quality-project)
 
-플래너 기반 동적 라우팅, `synthesize` 결과 합성, 장비명 정규화부터 대기비 산정까지의 흐름을 LangGraph로 구현했습니다.
+기상청·에어코리아 데이터를 수집해 Kafka·OpenSearch·알림 채널로 연결하는 이벤트 파이프라인입니다.
 
-[프로젝트와 담당 영역](https://github.com/hyeongyu-data/construction-risk-agent)
+- 결측값을 0으로 대체하지 않고 `정보없음`으로 처리하며 DLQ·수동 커밋·멱등 event ID로 재처리를 안전하게 했습니다.
+- 테스트 195개와 ruff·pip-audit·gitleaks·hadolint 기반 CI 검증을 구성하고 실데이터 알림 수신을 확인했습니다.
+- 현재 구성은 로컬 검증용이며 인터넷 공개 운영용이 아닙니다.
 
-</details>
+---
 
-<details>
-<summary><strong>Air Quality Project · 서울 기상 알림 파이프라인</strong></summary>
+## 🛠️ Tech Stack
 
-2026.04–08 · 개인 프로젝트 · 로컬 Docker 재현
+**Infra & Cloud**
 
-기상청·에어코리아 데이터를 Airflow로 수집하고 Kafka·OpenSearch·알림 채널로 연결했습니다. 결측값의 `정보없음` 처리, DLQ·멱등 event ID, 테스트 195개와 CI 보안 검사를 포함합니다. 현재 구성은 로컬 검증용입니다.
+![Terraform](https://img.shields.io/badge/Terraform-844FBA?style=flat&logo=terraform&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white)
+![ArgoCD](https://img.shields.io/badge/Argo%20CD-EF7B4D?style=flat&logo=argo&logoColor=white)
+![Google Cloud](https://img.shields.io/badge/Google%20Cloud-4285F4?style=flat&logo=googlecloud&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat&logo=githubactions&logoColor=white)
+![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat&logo=prometheus&logoColor=white)
+![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat&logo=grafana&logoColor=white)
 
-[코드와 운영 기록](https://github.com/hyeongyu-data/air-quality-project)
+**Languages & Data**
 
-</details>
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)
 
-<details>
-<summary><strong>이커머스 플랫폼 · 결제·마케팅 데이터 통합</strong></summary>
+**AI / Agents**
 
-2023.10–2026.02 · 1인 개발·운영 · 비공개 직장 코드
+![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=flat&logo=langgraph&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS%20Bedrock-232F3E?style=flat&logo=amazonaws&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white)
+![Claude](https://img.shields.io/badge/Claude%20Code-D97757?style=flat&logo=anthropic&logoColor=white)
 
-그누보드5/영카트5 기반 헬스·뷰티 커머스를 15개 이상 브랜드로 확장했습니다. KCP·Payple·네이버페이·LG유플러스 결제 4종과 네이버·쿠팡 주문을 통합 조회·정산하고, GTM 기반 GA4·Meta Pixel 이벤트를 설계했습니다.
+**Marketing & Analytics**
 
-2025년 재직 기간 기준 3개 브랜드에서 구매 약 9.2만 건·구매 수익 약 94억 원이 추적되는 데이터 수집 체계를 운영했습니다. 이 수치는 매출 증대 성과가 아니라 구축한 트래킹으로 확인한 거래 규모입니다.
+![Google Analytics](https://img.shields.io/badge/Google%20Analytics-E37400?style=flat&logo=googleanalytics&logoColor=white)
+![Google Tag Manager](https://img.shields.io/badge/Google%20Tag%20Manager-246FDB?style=flat&logo=googletagmanager&logoColor=white)
+![Mixpanel](https://img.shields.io/badge/Mixpanel-7856FF?style=flat&logo=mixpanel&logoColor=white)
 
-</details>
+---
 
-## 기술
-
-`Python` `SQL` `Airflow` `Kafka` `GCP` `Terraform` `Kubernetes` `Docker` `Prometheus` `Grafana` `OpenSearch` `LangGraph`
-
-함께 만든 도구: [repo-walk](https://github.com/hyeongyu-data/repo-walk) — 저장소의 커밋·이슈·PR 이력을 설명하고 중요한 변경을 리포트로 정리합니다.
+<p align="center"><img src="https://github-readme-stats.vercel.app/api?username=hyeongyu-data&show_icons=true&theme=default&hide_border=true" alt="hyeongyu-data github stats" /></p>
