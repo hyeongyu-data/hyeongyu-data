@@ -1,5 +1,5 @@
 <h1 align="center">안녕하세요, 최현규입니다. 👋</h1>
-<h3 align="center">이커머스 데이터 문제를 인프라로 풀어온 경험을 바탕으로, 데이터가 안정적으로 흐르는 플랫폼을 만드는 엔지니어를 지향합니다.</h3>
+<h3 align="center">이전에는 이커머스 플랫폼을 1인 개발·운영했으며, 현재는 데이터 엔지니어링과 MLOps를 중심으로 역량을 확장하고 있습니다.</h3>
 
 <div align="center">
   <a href="mailto:hyeongyu.data@gmail.com"><img src="https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
@@ -10,13 +10,9 @@
 
 ## 🙋‍♂️ About Me
 
-- ☁️ **SK플래닛 생성형 AI 활용 데이터 엔지니어 과정 2기** 수료. 8주 팀 캡스톤(Auto Research)에서 5인 중
-  인프라를 단독 전담했습니다.
-- 💼 이전에는 헬스/뷰티 이커머스 플랫폼을 **3년간 1인 개발자로 설계~운영**하며 15개+ 브랜드로 확장,
-  결제·오픈마켓 데이터를 통합하고 GA4·GTM 트래킹을 직접 구축한 경험이 데이터 엔지니어링 전환의 계기입니다.
-- 🔍 겉으로 보이는 증상만 고치지 않고 **같은 유형의 문제가 왜 반복되는지 구조적으로 파고드는** 방식으로
-  일합니다. AI 도구도 빠른 생성보다 **팀 검증 프로세스에 편입**시키는 데 집중합니다(Claude Code PR 리뷰
-  게이트 직접 설계).
+- ☁️ SK플래닛 생성형 AI 활용 데이터 엔지니어 과정 2기를 수료했습니다. 팀 프로젝트 Auto Research에서 클라우드 인프라와 배포·모니터링 환경을 담당했습니다.
+- 💼 이커머스 플랫폼을 1인 개발·운영하며 결제·주문 연동과 사용자 행동 데이터 수집을 경험했습니다.
+- 🔍 문제가 생기면 원인을 확인하고 해결 과정과 재발 방지 방법을 코드와 문서에 남깁니다.
 
 ---
 
@@ -107,7 +103,3 @@
 ![Google Analytics](https://img.shields.io/badge/Google%20Analytics-E37400?style=flat&logo=googleanalytics&logoColor=white)
 ![Google Tag Manager](https://img.shields.io/badge/Google%20Tag%20Manager-246FDB?style=flat&logo=googletagmanager&logoColor=white)
 ![Mixpanel](https://img.shields.io/badge/Mixpanel-7856FF?style=flat&logo=mixpanel&logoColor=white)
-
----
-
-<p align="center"><img src="https://github-readme-stats.vercel.app/api?username=hyeongyu-data&show_icons=true&theme=default&hide_border=true" alt="hyeongyu-data github stats" /></p>
