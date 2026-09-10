@@ -5,6 +5,8 @@
 이커머스 플랫폼을 1인 개발·운영했고, 5인 팀 ML 플랫폼 프로젝트에서 GCP·Kubernetes 인프라를 전담했습니다.
 설정과 실제 실행 상태를 대조해 장애 원인을 찾고, 해결 과정을 코드와 운영 문서에 남깁니다.
 
+SK플래닛 생성형AI 활용 데이터엔지니어 과정 2기를 수료했으며, 데이터 플랫폼·MLOps 엔지니어로 전환하고 있습니다.
+
 [이메일](mailto:hyeongyu.data@gmail.com) · [인프라 프로젝트](https://github.com/SKYAHO/Autoresearch-infra) · [최근 작업](https://github.com/hyeongyu-data/ecommerce-etl-pipeline)
 
 ---
@@ -18,13 +20,14 @@
 가설을 입력하면 AI 에이전트가 Kubernetes에서 실험을 실행하고 리포트를 생성하는 플랫폼입니다.
 클라우드 인프라와 배포·관측 환경을 담당했습니다.
 
-- **구축** — VPC·GKE·Cloud SQL·CI 인증을 Terraform으로 구성. 초기 리소스 25개 적용 후 `plan`의 `No changes`를 확인했습니다.
+- **구축** — VPC·GKE·Cloud SQL·CI 인증을 Terraform으로 구성. 초기 관리 리소스 25개를 적용한 뒤 `plan`의 `No changes`를 확인했습니다.
+- **관측** — 관측 공백을 8개 이슈로 나눠 1.5일 안에 Prometheus/Grafana·ELK 환경을 배포·검증했습니다.
 - **장애 대응** — 45시간 지속된 Airflow crash-loop의 원인을 오래된 `tfvars`와 NetworkPolicy 설정 불일치로 진단했습니다.
-- **운영 개선** — Prometheus/Grafana·ELK 관측 환경을 구축하고, 누락된 Kubernetes Service Account를 IaC 관리에 편입했습니다.
+- **운영 개선** — 누락된 Kubernetes Service Account를 IaC 관리에 편입하고, Claude Code 기반 PR 검증 절차를 설계했습니다.
 
 `GCP` `Terraform` `Kubernetes` `ArgoCD` `Prometheus` `Grafana`
 
-[인프라 코드와 운영 문서 →](https://github.com/SKYAHO/Autoresearch-infra)
+[인프라](https://github.com/SKYAHO/Autoresearch-infra) · [앱](https://github.com/SKYAHO/Autoresearch) · [Airflow](https://github.com/SKYAHO/Autoresearch-airflow)
 
 ### 02 · Ecommerce ETL — 이종 주문 데이터 수집·정제
 
@@ -52,6 +55,20 @@
 `Python` `LangGraph` `AWS Bedrock` `PostgreSQL`
 
 [프로젝트와 담당 영역 →](https://github.com/hyeongyu-data/construction-risk-agent)
+
+### 04 · Air Quality Project — 서울 기상 알림 파이프라인
+
+> 2026.04–08 · 개인 프로젝트 · 로컬 Docker 재현
+
+기상청·에어코리아 데이터를 수집해 Kafka로 전달하고, 규칙 기반 판정 결과를 OpenSearch와 알림 채널에 기록·발송하는 이벤트 파이프라인입니다.
+
+- **운영 신뢰성** — 결측값을 0으로 대체하지 않고 `정보없음`으로 처리하며, DLQ·수동 커밋·멱등 event ID로 재처리를 안전하게 했습니다.
+- **검증 결과** — 테스트 195개, CI에 ruff·pip-audit·gitleaks·hadolint를 포함하고 실데이터 알림 수신을 확인했습니다.
+- **관측·보안** — 처리 메트릭·하트비트·구조화 로그와 운영 보안 프로필을 구성했습니다. 현재 구성은 로컬 검증용이며 인터넷 공개 운영용이 아닙니다.
+
+`Python` `Airflow` `Kafka` `OpenSearch` `Docker Compose`
+
+[코드와 운영 기록 →](https://github.com/hyeongyu-data/air-quality-project)
 
 ---
 
