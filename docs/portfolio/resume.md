@@ -33,7 +33,7 @@
 **2026.09–진행 중 · 개인 프로젝트** · [저장소](https://github.com/hyeongyu-data/ecommerce-etl-pipeline)
 
 - 합성 PG 주문·로컬 목업 오픈마켓 API·GA4 목업 보고서를 수집하는 Airflow DAG 3개를 구현했습니다.
-- 원천별 데이터를 18개 컬럼의 통합 스키마로 변환하고 품질 검사 후 Parquet staging에 저장합니다. DuckDB 날짜별 통합 적재 DAG를 구현하고 기존 Docker E2E에서 152행·재실행 중복 0건을 확인했습니다.
+- 원천별 데이터를 18개 컬럼의 통합 스키마로 변환하고 Parquet staging과 품질검사를 구성했습니다. DuckDB 날짜별 통합 적재 DAG를 구현하고 기존 Docker E2E에서 152행·재실행 중복 0건을 확인했습니다.
 - BigQuery 실연결·실제 GA4 API·분석 대시보드는 후속 범위입니다. 목업 데이터와 실제 외부 연동의 범위를 구분해 문서화했습니다.
 
 <!-- pagebreak -->
