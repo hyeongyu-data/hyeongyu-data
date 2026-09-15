@@ -15,6 +15,10 @@
 
 ---
 
+## 지원·프로젝트 자료
+
+[이력서 PDF](docs/portfolio/resume.pdf) · [포트폴리오 PDF](docs/portfolio/portfolio.pdf) · [통합 발표자료·대시보드](docs/portfolio/README.md)
+
 ## 🚀 Projects
 
 ### 1. Auto Research — 에이전트가 쓰는 ML 플랫폼 ⚙️
@@ -33,16 +37,16 @@
 
 ### 2. Ecommerce ETL — 이종 주문 데이터 수집·정제 📦
 
-`Python` `Airflow` `pandas` `PyArrow` `Docker Compose`
+`Python` `Airflow` `pandas` `PyArrow` `DuckDB` `Docker Compose`
 
 > 개인 프로젝트 · 2026.09– 진행 중
 > 레포: [ecommerce-etl-pipeline](https://github.com/hyeongyu-data/ecommerce-etl-pipeline)
 
 이커머스 현장에서 결제·오픈마켓 주문 데이터를 대조하던 경험을 재현 가능한 ETL 파이프라인으로 구현하고 있습니다.
 
-- 합성 PG 주문과 로컬 목업 오픈마켓 HTTP API를 수집하는 Airflow DAG 2개를 구현했습니다.
-- 원천별 필드를 통합 스키마로 매핑하고 Parquet staging에 저장하며 데이터 품질을 검사합니다.
-- GA4 이벤트 수집·BigQuery 적재·대시보드는 후속 작업으로 명시해 진행 상태를 구분했습니다.
+- 합성 PG 주문·로컬 목업 오픈마켓 HTTP API·GA4 목업 보고서를 수집하는 Airflow DAG 3개를 구현했습니다.
+- 18컬럼 통합 스키마·Parquet staging·공통 품질검사 후 DuckDB에 날짜별로 적재합니다. 기존 Docker E2E에서 152행·재실행 중복 0건을 확인했습니다.
+- 09.15 pytest 91개 통과·1개 스킵(Airflow 미설치). 실제 GA4 API·BigQuery 실연결·분석 대시보드는 후속 범위입니다.
 
 ### 3. Construction Risk Agent — 공사 리스크·추가비용 산정 에이전트 🏗️
 
@@ -60,13 +64,13 @@
 
 `Python` `Airflow` `Kafka` `OpenSearch` `Docker Compose`
 
-> 개인 프로젝트 · 2026.04–08 · 로컬 Docker 재현
+> 개인 프로젝트 · 2026.04–09 · 로컬 Docker 재현
 > 레포: [air-quality-project](https://github.com/hyeongyu-data/air-quality-project)
 
 기상청·에어코리아 데이터를 수집해 Kafka·OpenSearch·알림 채널로 연결하는 이벤트 파이프라인입니다.
 
 - 결측값을 0으로 대체하지 않고 `정보없음`으로 처리하며 DLQ·수동 커밋·멱등 event ID로 재처리를 안전하게 했습니다.
-- 테스트 195개와 ruff·pip-audit·gitleaks·hadolint 기반 CI 검증을 구성하고 실데이터 알림 수신을 확인했습니다.
+- 09.15 pytest 248개 통과·커버리지 56.75%를 확인했습니다. ruff·pip-audit·gitleaks·hadolint 기반 CI와 기존 로컬 실데이터 알림 수신 기록이 있습니다.
 - 현재 구성은 로컬 검증용이며 인터넷 공개 운영용이 아닙니다.
 
 ---
