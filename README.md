@@ -22,7 +22,7 @@
 `Terraform` `GKE` `ArgoCD` `Prometheus/Grafana` `ELK` `GitHub Actions` `Google Secret Manager`
 
 > 5인 팀 · 2026.06–08(8주 캡스톤) · SK플래닛 최종 프로젝트 · 담당: 인프라 전담
-> 레포: [Autoresearch-infra](https://github.com/SKYAHO/Autoresearch-infra) · [Autoresearch](https://github.com/SKYAHO/Autoresearch) · [Autoresearch-airflow](https://github.com/SKYAHO/Autoresearch-airflow) *(팀 조직 저장소)*
+> 레포: [Autoresearch-infra](https://github.com/hyeongyu-data/Autoresearch-infra) · [Autoresearch](https://github.com/hyeongyu-data/Autoresearch) · [Autoresearch-airflow](https://github.com/hyeongyu-data/Autoresearch-airflow) *(팀 프로젝트의 개인 계정 포크)*
 
 가설을 제출하면 AI 에이전트가 Kubernetes에서 실험을 실행하고 리포트를 자동 생성하는 ML 라이프사이클 자동화 플랫폼.
 
